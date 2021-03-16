@@ -16,4 +16,13 @@ def only_evens(list_of_numbers):
 
     # Then return the number
     return even_numbers
-# Define the function here
+
+def only_evens_numpy(list_of_numbers):
+    """Take a list of numbers, and return a list of only the even numbers"""
+    # This is an empty list that we'll append the even numbers onto
+    list_of_numbers = np.array(list_of_numbers)
+    evens = list_of_numbers % 2 == 0
+
+
+    # Then return the number
+    return list_of_numbers[evens]
